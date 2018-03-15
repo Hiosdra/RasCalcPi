@@ -26,7 +26,7 @@ class MockKeyboard : Keyboard {
         Key.M_PLUS -> memoryPlus()
         Key.M_MINUS -> memoryMinus()
         Key.M_ZERO -> memoryZero()
-        Key.COMMA -> TODO("xd")
+        Key.COMMA -> device.screen.append(".")
         Key.PLUS -> getScreenTextToVarAndSetMathOperation(key)
         Key.MINUS -> getScreenTextToVarAndSetMathOperation(key)
         Key.MULTIPLY -> getScreenTextToVarAndSetMathOperation(key)

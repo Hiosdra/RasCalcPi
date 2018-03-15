@@ -9,7 +9,7 @@ internal class RootTest {
     }
 
     @Test
-    internal fun Root4() {
+    internal fun root4() {
         Device.INSTANCE.keyboard.run {
             pressKey(Key.ON)
             pressKey(Key.K4)
@@ -20,7 +20,7 @@ internal class RootTest {
     }
 
     @Test
-    internal fun Root2() {
+    internal fun root2() {
         Device.INSTANCE.keyboard.run {
             pressKey(Key.ON)
             pressKey(Key.K2)
@@ -31,7 +31,7 @@ internal class RootTest {
     }
 
     @Test
-    internal fun RootMinus2() {
+    internal fun rootMinus2() {
         Device.INSTANCE.keyboard.run {
             pressKey(Key.ON)
             pressKey(Key.MINUS)
@@ -42,4 +42,16 @@ internal class RootTest {
         assertScreenShow("NaN")
     }
 
+    @Test
+    internal fun root5AndHalf() {
+        Device.INSTANCE.keyboard.run {
+            pressKey(Key.ON)
+            pressKey(Key.K5)
+            pressKey(Key.COMMA)
+            pressKey(Key.K5)
+            pressKey(Key.ROOT)
+            pressKey(Key.RESULT)
+        }
+        assertScreenShow("2.345207879911715")
+    }
 }

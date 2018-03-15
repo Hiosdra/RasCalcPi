@@ -68,4 +68,20 @@ internal class SubstractTest {
         }
         assertScreenShow("-250")
     }
+
+    @Test
+    internal fun substract10AndHalfFrom11() {
+        Device.INSTANCE.keyboard.run {
+            pressKey(Key.ON)
+            pressKey(Key.K1)
+            pressKey(Key.K1)
+            pressKey(Key.MINUS)
+            pressKey(Key.K1)
+            pressKey(Key.K0)
+            pressKey(Key.COMMA)
+            pressKey(Key.K5)
+            pressKey(Key.RESULT)
+        }
+        assertScreenShow("0.5")
+    }
 }

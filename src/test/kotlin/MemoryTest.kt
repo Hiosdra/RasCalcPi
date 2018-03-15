@@ -101,4 +101,18 @@ internal class MemoryTest {
         }
         assertScreenShow("10")
     }
+
+    @Test
+    internal fun memoryInsert5AndHalfThenGetWhatIsInside() {
+        Device.INSTANCE.keyboard.run {
+            pressKey(Key.ON)
+            pressKey(Key.K5)
+            pressKey(Key.COMMA)
+            pressKey(Key.K5)
+            pressKey(Key.M_PLUS)
+            pressKey(Key.ON)
+            pressKey(Key.M_ZERO)
+        }
+        assertScreenShow("5.5")
+    }
 }

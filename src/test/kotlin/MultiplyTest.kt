@@ -34,4 +34,18 @@ internal class MultiplyTest {
         }
         assertScreenShow("-4")
     }
+
+    @Test
+    internal fun multiply3times1AndHalf() {
+        Device.INSTANCE.keyboard.run {
+            pressKey(Key.ON)
+            pressKey(Key.K3)
+            pressKey(Key.MULTIPLY)
+            pressKey(Key.K1)
+            pressKey(Key.COMMA)
+            pressKey(Key.K5)
+            pressKey(Key.RESULT)
+        }
+        assertScreenShow("4.5")
+    }
 }

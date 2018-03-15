@@ -57,4 +57,18 @@ internal class DevideTest {
         }
         assertScreenShow("-2.5")
     }
+
+    @Test
+    internal fun devide5Times2AndHalf() {
+        Device.INSTANCE.keyboard.run {
+            pressKey(Key.ON)
+            pressKey(Key.K5)
+            pressKey(Key.DEVIDE)
+            pressKey(Key.K2)
+            pressKey(Key.COMMA)
+            pressKey(Key.K5)
+            pressKey(Key.RESULT)
+        }
+        assertScreenShow("2")
+    }
 }

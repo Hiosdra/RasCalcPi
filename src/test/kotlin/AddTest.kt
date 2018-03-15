@@ -32,4 +32,18 @@ internal class AddTest {
         }
         assertScreenShow("-47")
     }
+
+    @Test
+    internal fun addDecimalToInteger() {
+        Device.INSTANCE.keyboard.run {
+            pressKey(Key.ON)
+            pressKey(Key.K1)
+            pressKey(Key.COMMA)
+            pressKey(Key.K5)
+            pressKey(Key.PLUS)
+            pressKey(Key.K3)
+            pressKey(Key.RESULT)
+        }
+        assertScreenShow("4.5")
+    }
 }
