@@ -4,8 +4,8 @@ class MockScreen : Screen {
     var powered = false
     private var text = ""
 
-    override fun power(isOn: Boolean) {
-        powered = isOn
+    override fun power(willBeOn: Boolean) {
+        powered = willBeOn
     }
 
     override fun getText() = text

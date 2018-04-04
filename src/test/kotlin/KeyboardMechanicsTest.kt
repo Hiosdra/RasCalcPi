@@ -11,10 +11,10 @@ internal class KeyboardMechanicsTest {
 
     @Test
     internal fun keyboardSingleOffWhenScreenOn() {
-        Device.INSTANCE.keyboard.run {
-            pressKey(Key.ON)
-            pressKey(Key.K5)
-            pressKey(Key.OFF)
+        Device.INSTANCE.keyboardOperator.run {
+            onKeyPress(Key.ON)
+            onKeyPress(Key.K5)
+            onKeyPress(Key.OFF)
         }
         assertFalse(Device.INSTANCE.screen.powered)
         assertScreenShow("5")
@@ -22,10 +22,10 @@ internal class KeyboardMechanicsTest {
 
     @Test
     internal fun keyboardTwoOffWhenScreenOn() {
-        Device.INSTANCE.keyboard.run {
-            pressKey(Key.ON)
-            pressKey(Key.OFF)
-            pressKey(Key.OFF)
+        Device.INSTANCE.keyboardOperator.run {
+            onKeyPress(Key.ON)
+            onKeyPress(Key.OFF)
+            onKeyPress(Key.OFF)
         }
         assertFalse(Device.INSTANCE.screen.powered)
         assertScreenShow("")

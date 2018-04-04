@@ -10,47 +10,47 @@ internal class RootTest {
 
     @Test
     internal fun root4() {
-        Device.INSTANCE.keyboard.run {
-            pressKey(Key.ON)
-            pressKey(Key.K4)
-            pressKey(Key.ROOT)
-            pressKey(Key.RESULT)
+        Device.INSTANCE.keyboardOperator.run {
+            onKeyPress(Key.ON)
+            onKeyPress(Key.K4)
+            onKeyPress(Key.ROOT)
+            onKeyPress(Key.RESULT)
         }
         assertScreenShow("2")
     }
 
     @Test
     internal fun root2() {
-        Device.INSTANCE.keyboard.run {
-            pressKey(Key.ON)
-            pressKey(Key.K2)
-            pressKey(Key.ROOT)
-            pressKey(Key.RESULT)
+        Device.INSTANCE.keyboardOperator.run {
+            onKeyPress(Key.ON)
+            onKeyPress(Key.K2)
+            onKeyPress(Key.ROOT)
+            onKeyPress(Key.RESULT)
         }
         assertScreenShow("1.4142135623730951")
     }
 
     @Test
     internal fun rootMinus2() {
-        Device.INSTANCE.keyboard.run {
-            pressKey(Key.ON)
-            pressKey(Key.MINUS)
-            pressKey(Key.K2)
-            pressKey(Key.ROOT)
-            pressKey(Key.RESULT)
+        Device.INSTANCE.keyboardOperator.run {
+            onKeyPress(Key.ON)
+            onKeyPress(Key.MINUS)
+            onKeyPress(Key.K2)
+            onKeyPress(Key.ROOT)
+            onKeyPress(Key.RESULT)
         }
         assertScreenShow("NaN")
     }
 
     @Test
     internal fun root5AndHalf() {
-        Device.INSTANCE.keyboard.run {
-            pressKey(Key.ON)
-            pressKey(Key.K5)
-            pressKey(Key.COMMA)
-            pressKey(Key.K5)
-            pressKey(Key.ROOT)
-            pressKey(Key.RESULT)
+        Device.INSTANCE.keyboardOperator.run {
+            onKeyPress(Key.ON)
+            onKeyPress(Key.K5)
+            onKeyPress(Key.COMMA)
+            onKeyPress(Key.K5)
+            onKeyPress(Key.ROOT)
+            onKeyPress(Key.RESULT)
         }
         assertScreenShow("2.345207879911715")
     }

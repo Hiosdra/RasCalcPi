@@ -12,39 +12,39 @@ internal class MultiplyTest {
 
     @Test
     internal fun multiply2times2() {
-        Device.INSTANCE.keyboard.run {
-            pressKey(Key.ON)
-            pressKey(Key.K2)
-            pressKey(Key.MULTIPLY)
-            pressKey(Key.K2)
-            pressKey(Key.RESULT)
+        Device.INSTANCE.keyboardOperator.run {
+            onKeyPress(Key.ON)
+            onKeyPress(Key.K2)
+            onKeyPress(Key.MULTIPLY)
+            onKeyPress(Key.K2)
+            onKeyPress(Key.RESULT)
         }
         assertScreenShow("4")
     }
 
     @Test
     internal fun multiplyMinus2times2() {
-        Device.INSTANCE.keyboard.run {
-            pressKey(Key.ON)
-            pressKey(Key.MINUS)
-            pressKey(Key.K2)
-            pressKey(Key.MULTIPLY)
-            pressKey(Key.K2)
-            pressKey(Key.RESULT)
+        Device.INSTANCE.keyboardOperator.run {
+            onKeyPress(Key.ON)
+            onKeyPress(Key.MINUS)
+            onKeyPress(Key.K2)
+            onKeyPress(Key.MULTIPLY)
+            onKeyPress(Key.K2)
+            onKeyPress(Key.RESULT)
         }
         assertScreenShow("-4")
     }
 
     @Test
     internal fun multiply3times1AndHalf() {
-        Device.INSTANCE.keyboard.run {
-            pressKey(Key.ON)
-            pressKey(Key.K3)
-            pressKey(Key.MULTIPLY)
-            pressKey(Key.K1)
-            pressKey(Key.COMMA)
-            pressKey(Key.K5)
-            pressKey(Key.RESULT)
+        Device.INSTANCE.keyboardOperator.run {
+            onKeyPress(Key.ON)
+            onKeyPress(Key.K3)
+            onKeyPress(Key.MULTIPLY)
+            onKeyPress(Key.K1)
+            onKeyPress(Key.COMMA)
+            onKeyPress(Key.K5)
+            onKeyPress(Key.RESULT)
         }
         assertScreenShow("4.5")
     }

@@ -22,9 +22,10 @@ repositories {
 }
 
 dependencies {
-    compile 'com.pi4j:pi4j-core:1.1'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    compile "org.junit.jupiter:junit-jupiter-api:5.1.0"
+    implementation 'com.pi4j:pi4j-core:1.1'
+    implementation 'com.pi4j:pi4j-device:1.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "org.junit.jupiter:junit-jupiter-api:5.1.0"
 }
 
 compileKotlin {

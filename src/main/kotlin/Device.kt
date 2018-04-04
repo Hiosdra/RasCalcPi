@@ -6,7 +6,7 @@ class Device private constructor() {
         var INSTANCE = Device()
         private set
     }
-
+    val keyboardOperator by lazy { KeyboardOperator() }
     val keyboard by lazy { MockKeyboard() }
     val screen by lazy { MockScreen() }
 
